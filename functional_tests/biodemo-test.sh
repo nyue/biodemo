@@ -135,7 +135,7 @@ function test_exit_status {
         echo "Actual exit status: $exit_status"
         echo "Expected exit status: $expected_exit_status"
     fi 
-	coverage run ${1/$test_program/$(which $test_program)}
+	eval "coverage run -a ${1/$test_program/$(which $test_program)}"
 }
 
 
